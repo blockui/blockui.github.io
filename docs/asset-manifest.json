@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "static/css/main.css",
+    "main.js": "static/js/bundle.js",
+    "index.html": "index.html",
+    "service-worker.js": "service-worker.js",
+    "static/js/bundle.js.LICENSE.txt": "static/js/bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/css/main.css",
+    "static/js/bundle.js"
+  ]
+}
