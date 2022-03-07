@@ -1,0 +1,23 @@
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-weui-theme='light']) {
+    .css-1nrgn0c-MuiButtonBase-root-MuiFab-root-MuiSpeedDialAction-fab, .css-ytbto4-MuiButtonBase-root-MuiFab-root-MuiSpeedDialAction-fab {
+      background-color: var(--weui-BG) !important;
+    }
+
+    .speed-dial-box .MuiFab-primary:hover {
+      background-color: var(--weui-INDIGO) !important;
+    }
+  }
+  .group-name-input{
+    .group-avatar-upload-box{
+      background-color: var(--weui-FG-2);
+      svg{
+        color: var(--weui-FG-1);
+      }
+    }
+  }
+  .weui-primary-loading_brand{
+    color:var(--weui-WHITE)
+  }
+}

@@ -1,0 +1,43 @@
+@import "variables";
+
+$sidebar_on_chat_list_width: 0px;
+@media (min-width: $maxWidth) {
+  .weui-actionsheet,.weui-toptips{
+    left: calc(100vw / 2 - 768px / 2);
+  }
+  .weui-actionsheet{
+    max-width: $maxWidth;
+  }
+  .weui-toptips{
+    max-width: 750px;
+  }
+  body {
+    overflow: hidden;
+    background-color: #212020 !important;
+  }
+
+  .page {
+    .MuiSpeedDial-root {
+      left: calc(50vw - 384px + 24px) !important;
+    }
+
+    .weui-tabbar {
+      //width: calc(768px - 80px);
+      //left: calc(50vw - 384px) !important;
+    }
+
+
+    .section_header {
+      .weui-search-bar {
+        width: auto;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .section_header header > div, .section_page header > div {
+    min-height: 48px !important;
+  }
+}

@@ -1,0 +1,21 @@
+import React,{Component} from "react"
+//import {connect} from "react-redux"
+import PropTypes from 'prop-types'
+
+class ${NAME} extends Component{
+    render() {
+        return(
+            <div>
+
+            </div>
+        )
+    }
+}
+
+${NAME}.propTypes = {}
+
+//export default connect(({...state})=>{
+//    return {}
+//})(${NAME})
+
+export default ${NAME}

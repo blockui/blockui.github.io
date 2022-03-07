@@ -1,0 +1,21 @@
+.weui-flex__item {
+
+  .placeholder {
+    margin: 4px;
+    text-align: center;
+    padding: 12px;
+    background-color: var(--weui-BG-0);
+  }
+}
+
+.loading_demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .weui-primary-loading {
+    position: relative !important;
+    margin-top: 0 !important;
+    margin-left: 10px;
+  }
+}

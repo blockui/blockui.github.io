@@ -1,0 +1,16 @@
+# see https://docs.gitlab.com/ce/ci/yaml/README.html for all available options
+
+image: node:14.15.5
+
+build:
+  stage: build
+  only:
+    - master
+  tags:
+    - build01
+  script:
+    - mkdir -p /opt/baijing/data/webroot
+    - cp -a release/* /opt/baijing/data/webroot
+    - ls -alh /opt/baijing/data/webroot
+    - cat /opt/baijing/data/webroot/default/index.html
+    - cat /opt/baijing/data/webroot/admin/index.html

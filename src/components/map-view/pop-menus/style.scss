@@ -1,0 +1,50 @@
+.pop-menus {
+  position: relative;
+
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .menus {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    border-radius: 8px;
+    background-color: var(--weui-BG-0);
+
+    .menu-action {
+      color: var(--weui-FG-1);
+      min-width: 80px;
+      display: flex;
+      align-items: center;
+      height: 38px;
+      line-height: 38px;
+      padding-left: 8px;
+      padding-right: 8px;
+      overflow: hidden;
+      font-size: 12px;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+
+        svg {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "version": "2.1.96",
+  "appId": 88888,
+  "autoUpdateConstant": true,
+  "debug": true,
+  "title": "白鲸",
+  "common": {
+    "quickActions": [
+      {
+        "icon": "videoCam",
+        "name": "video"
+      },
+      {
+        "icon": "image",
+        "name": "image"
+      },
+      {
+        "icon": "TextSnippetOutlined",
+        "name": "text"
+      },
+      {
+        "icon": "MicRounded",
+        "name": "audio"
+      },
+      {
+        "icon": "MicRounded",
+        "name": "audio"
+      }
+    ],
+    "upload": {
+      "maxUploadLengthM": 10,
+      "maxUploadFile": 6,
+      "allowTypes": [
+        "image/png",
+        "image/gif",
+        "image/jpg",
+        "image/jpeg"
+      ],
+      "audio": {
+        "minRecordTime": 1,
+        "allowTypes": [
+          "audio/*"
+        ],
+        "maxUploadFile": 1,
+        "maxUploadLengthM": 20
+      },
+      "video": {
+        "allowTypes": [
+          "video/*"
+        ],
+        "maxUploadFile": 1,
+        "maxUploadLengthM": 3000
+      }
+    }
+  },
+  "index": {
+    "showBanner": false,
+    "banners": [
+      {
+        "url": "p1",
+        "imgPath": "m_image_b45207a93dee69bb400f708d1e9b4953_jpeg"
+      }
+    ],
+    "homeTopBar": [],
+    "apps": [
+      {
+        "children": [
+          {
+            "label": "朋友圈",
+            "hash": "Circle/Circle",
+            "icon": "MdToys"
+          },
+          {
+            "label": "地图",
+            "hash": "Map/Map",
+            "icon": "NavigationTwoTone"
+          },
+          {
+            "label": "二维码名片",
+            "icon": "qrCode",
+            "hash": "Me/Profile/QrCode"
+          }
+        ]
+      }
+    ],
+    "tarBar": {
+      "items": [
+        {
+          "label": "发现",
+          "icon": "home"
+        },
+        {
+          "label": "消息",
+          "icon": "chat"
+        },
+        {
+          "label": "联系人",
+          "icon": "contactPhone"
+        },
+        {
+          "label": "我",
+          "icon": "person"
+        }
+      ]
+    },
+    "quickDials": [
+      {
+        "icon": "Bookmarks",
+        "name": "收藏"
+      },
+      {
+        "icon": "FaPlusSquare",
+        "name": "发贴",
+        "hash": "Circle/CirclePublish"
+      },
+      {
+        "icon": "scan",
+        "name": "扫一扫"
+      }
+    ]
+  }
+}

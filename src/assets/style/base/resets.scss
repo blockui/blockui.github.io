@@ -1,0 +1,81 @@
+
+span.a:active, .btn_active:active, {
+  background-color: rgba(0, 0, 0, .1) !important;
+}
+
+@supports (top:constant(safe-area-inset-top)) {
+  .page {
+    padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left)
+  }
+  .page.navbar, .page.tabbar {
+    padding-left: 0;
+    padding-right: 0
+  }
+
+  .weui-tab__panel {
+    padding-left: constant(safe-area-inset-left);
+    padding-right: constant(safe-area-inset-right)
+  }
+}
+
+@supports (top:env(safe-area-inset-top)) {
+  .page {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)
+  }
+
+  .page.DemoWeuiArticle, .page.msg_success, .page.msg_text, .page.msg_text_primary, .page.msg_warn, .page.navbar, .page.tabbar {
+    padding: 0
+  }
+}
+
+ul {
+  list-style: disc;
+  margin-left: 8px;
+
+  li {
+    margin-bottom: 4px;
+  }
+}
+
+.leaflet-control-attribution {
+  display: none !important
+}
+
+.leaflet-control-layers {
+  display: none !important
+}
+
+
+.weui-gallery {
+  z-index: 1300;
+  position: fixed;
+
+}
+
+
+.MuiPaper-root {
+  color: white !important;
+
+  .MuiTypography-body1 {
+    color: var(--weui-FG-1);
+  }
+}
+
+span.a {
+  color: var(--weui-LINK) !important;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  font-size: 1.1em;
+  color: var(--weui-FG-1);
+}
+
+.speed-dial-box svg.MuiSpeedDialIcon-icon,.speed-dial-box svg.MuiSpeedDialIcon-openIcon {
+  color: var(--weui-WHITE);
+}
+input,textarea{
+  -webkit-user-select: text;
+  user-select: text;
+}
