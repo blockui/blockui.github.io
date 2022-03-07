@@ -1076,17 +1076,19 @@ export const _error = function (...args) {
 export function setAfterWindowResize(id, func) {
   if (!window.__afterWindowResize)
     window.__afterWindowResize = {}
-  window.__afterWindowResize = func
+  window.__afterWindowResize[id] = func
 }
 
 function onWindowResize() {
+  const clientHeight = document.body.clientHeight;
+  const clientWidth = document.body.clientWidth;
   setStoreState("global", {
-    clientHeight: document.body.clientHeight,
-    clientWidth: document.body.clientWidth,
+    clientHeight,
+    clientWidth,
     isPad: false//document.body.clientWidth >= getAppMaxWidth()
   })
   setTimeout(() => {
-    runAfterWindowResize()
+    runAfterWindowResize({clientHeight,clientWidth})
   }, 100)
 }
 
@@ -1100,11 +1102,11 @@ export function regOnWindowResize() {
   window.addEventListener("resize", onWindowResize);
 }
 
-export function runAfterWindowResize() {
+export function runAfterWindowResize(options) {
   if (window.__afterWindowResize) {
     Object.keys(window.__afterWindowResize).forEach(((key) => {
       if (window.__afterWindowResize[key]) {
-        window.__afterWindowResize[key]()
+        window.__afterWindowResize[key](options)
       }
     }))
   }

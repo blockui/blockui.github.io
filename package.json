@@ -151,7 +151,7 @@
     "start": "PORT=5005 node scripts/start.js",
     "routes:test": "INDEX=Test/Tests/Features/Permission npm run routes",
     "routes:wallet": "INDEX=Wallet/Index npm run routes",
-    "routes": "APPS=Home,Wallet,Test node scripts/routes.js",
+    "routes": "APPS=Home,Crypto,Wallet,Test node scripts/routes.js",
     "build": "BUILD_PATH=docs node scripts/build.js",
     "server": "serve -s build -l 3008 --cors | open http://localhost:3008"
   },

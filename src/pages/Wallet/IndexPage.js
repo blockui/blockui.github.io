@@ -3,23 +3,6 @@ import {connect} from "react-redux";
 import BasePage from "components/core/BasePage";
 import "./style.scss"
 import {WeCell, WeFormGroup} from "shared/weui";
-import {
-  Button,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  Table,
-  Tbody,
-  Td,
-  Tfoot,
-  Th,
-  Thead,
-  Tr
-} from "@chakra-ui/react";
 
 export default connect(({global}) => {
   return {

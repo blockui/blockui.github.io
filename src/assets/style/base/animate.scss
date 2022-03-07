@@ -160,3 +160,31 @@
   animation: b .3s forwards;
 }
 
+
+/*fade-in*/
+.fade-in-enter {
+  opacity: 0;
+}
+
+.fade-in-enter-active {
+  opacity: 1;
+  transition: all 200ms;
+}
+
+.fade-in-enter-done {
+  opacity: 1;
+}
+
+/*fade-out*/
+.fade-out-enter {
+  opacity: 0;
+}
+
+.fade-out-enter-active {
+  opacity: 1;
+  transition: all 200ms;
+}
+
+.fade-out-enter-done {
+  opacity: 1;
+}

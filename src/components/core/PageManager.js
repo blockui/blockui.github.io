@@ -2,8 +2,8 @@ import React, {Component, Fragment} from "react";
 import {CSSTransition} from "react-transition-group";
 import cls from 'classnames'
 import queryString from 'query-string'
-import {getLocationHashData} from "shared/functions/common";
-
+import {getLocationHashData, setAfterWindowResize} from "shared/functions/common";
+import config from 'config'
 const {location} = window
 
 export const PageContext = React.createContext({
@@ -51,6 +51,11 @@ export function parseHash(hash) {
 export class PageManager extends Component {
   constructor(props) {
     super(props);
+    const {AppMaxWidth} = config.ui
+    this.mobileApp = AppMaxWidth >= document.body.clientWidth
+    setAfterWindowResize("PageManager",({clientWidth})=>{
+      this.mobileApp = AppMaxWidth >= document.body.clientWidth
+    })
     //delPagesStack();
     const pages = {}
     let _defaultPage = null
@@ -194,7 +199,8 @@ export class PageManager extends Component {
     const {_pageStack} = this.state;
     const {name, mainPage} = page
     const {hash} = location
-    const animateClassName = "slide-in-from-right";
+
+    const animateClassName = this.mobileApp ? "slide-in-from-right" : "fade-in";
     if (
       _pageStack.length === 0 ||
       page.name === PageManager.defaultIndexPageName ||
@@ -206,7 +212,7 @@ export class PageManager extends Component {
         pageStack.push({
           ..._defaultPage,
           visible: true,
-          animateClassName: animateClassName,
+          animateClassName,
           className: `${_defaultPage.className} sub-page`
         })
       }
@@ -216,7 +222,7 @@ export class PageManager extends Component {
         data: getLocationHashData(hash) || {},
         mainPage,
         visible: true,
-        animateClassName: animateClassName,
+        animateClassName,
         className: `page ${name.replace(/\//g, "_")} cur-page`
       }
 
@@ -267,7 +273,7 @@ export class PageManager extends Component {
             visible: false,
             data: getLocationHashData(hash) || {},
             className: `page ${page.name.replace(/\//g, "_")}`,
-            animateClassName: "slide-in-from-right",
+            animateClassName,
           }
         })
         currentPage = pageStack.pop();
@@ -283,6 +289,8 @@ export class PageManager extends Component {
   }
 
   _back(counter) {
+    const animateClassName = this.mobileApp ? "slide-out-from-left" : "fade-out";
+
     this.backing = true
     const {_pageStack} = this.state;
     let currentPage
@@ -305,7 +313,7 @@ export class PageManager extends Component {
       pageStack: _pageStack,
       currentPage: {
         ...currentPage,
-        animateClassName: "slide-out-from-left",
+        animateClassName,
         className: `page ${currentPage.name.replace(/\//g, "_")}`
       }
     }).then((pageStack) => {

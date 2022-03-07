@@ -1,7 +1,7 @@
 import React from "react";
 
 import { IoIosArrowBack,IoIosSearch,IoMdWallet } from "react-icons/io";
-import { IoMenu } from "react-icons/io5";
+import { IoMenu,IoCloudUpload } from "react-icons/io5";
 import { RiSortAsc,RiSortDesc } from "react-icons/ri";
 
 import { FaRegCircle,FaRegCheckCircle,FaChevronCircleRight } from "react-icons/fa";
@@ -17,6 +17,7 @@ export const Icon = (props) => {
 export const Icons = {
   "back": <IoIosArrowBack/>,
   "menu": <IoMenu/>,
+  "upload": <IoCloudUpload/>,
   "refresh": <HiRefresh/>,
   "wallet": <IoMdWallet/>,
   "search": <IoIosSearch/>,

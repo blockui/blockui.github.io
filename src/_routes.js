@@ -4,6 +4,17 @@
 */
 
 import HomeIndex from 'pages/Home/IndexPage';
+import CryptoAesEnterData from 'pages/Crypto/Aes/EnterDataPage';
+import CryptoAesIndex from 'pages/Crypto/Aes/IndexPage';
+import CryptoAesResult from 'pages/Crypto/Aes/ResultPage';
+import CryptoBase64Result from 'pages/Crypto/Base64/ResultPage';
+import CryptoBase64 from 'pages/Crypto/Base64Page';
+import CryptoDesEnterData from 'pages/Crypto/Des/EnterDataPage';
+import CryptoDesIndex from 'pages/Crypto/Des/IndexPage';
+import CryptoDesResult from 'pages/Crypto/Des/ResultPage';
+import CryptoHash from 'pages/Crypto/HashPage';
+import CryptoIndex from 'pages/Crypto/IndexPage';
+import CryptoRandom from 'pages/Crypto/RandomPage';
 import WalletAccount from 'pages/Wallet/AccountPage';
 import WalletAccounts from 'pages/Wallet/AccountsPage';
 import WalletAccountsSelect from 'pages/Wallet/AccountsSelectPage';
@@ -57,6 +68,17 @@ import {Home404} from 'components/core/PageManager';
 
 const Routes =  [
   {name: 'Home/Index', index:true,  component: HomeIndex},
+  {name: 'Crypto/Aes/EnterData', component: CryptoAesEnterData},
+  {name: 'Crypto/Aes/Index', component: CryptoAesIndex},
+  {name: 'Crypto/Aes/Result', component: CryptoAesResult},
+  {name: 'Crypto/Base64/Result', component: CryptoBase64Result},
+  {name: 'Crypto/Base64', component: CryptoBase64},
+  {name: 'Crypto/Des/EnterData', component: CryptoDesEnterData},
+  {name: 'Crypto/Des/Index', component: CryptoDesIndex},
+  {name: 'Crypto/Des/Result', component: CryptoDesResult},
+  {name: 'Crypto/Hash', component: CryptoHash},
+  {name: 'Crypto/Index', component: CryptoIndex},
+  {name: 'Crypto/Random', component: CryptoRandom},
   {name: 'Wallet/Account', component: WalletAccount},
   {name: 'Wallet/Accounts', component: WalletAccounts},
   {name: 'Wallet/AccountsSelect', component: WalletAccountsSelect},
