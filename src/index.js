@@ -10,12 +10,14 @@ const colors = {
     900: '#1a365d',
     800: '#153e75',
     700: '#2a69ac',
+    
   },
 }
 const theme = extendTheme({ colors })
 
 const renderApp = () => {
-  console.log(constant)
+  // console.log(constant)
+  console.log(process.env)
   render(
     <ChakraProvider theme={theme}>
       <App/>

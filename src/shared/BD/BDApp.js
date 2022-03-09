@@ -23,11 +23,14 @@ import {clearExpiredCache} from "../functions/cache";
 import BDMsgServer from "./BDMsgServer";
 import {postRemote} from "../functions/network";
 import BDAuth from "./BDAuth";
-import BDQueue from "./BDQueue";
 import BDConstant from "./BDConstant";
 import {compareVersion} from "../functions/utils";
 import {PageManager} from "../../components/core/PageManager";
 import {base64Decode, base64Encode} from "../functions/base64";
+import BaWebSocket from "../block-chain/api/BaWebSocket";
+import {KLine} from "../block-chain/api/BaApi";
+import config from "config";
+import BDQueue from "./BDQueue";
 
 class BDApp {
   static looper() {
@@ -94,12 +97,18 @@ class BDApp {
   }
 
   static loadApp(cb) {
-
     cb && cb()
   }
 
   static afterLoadApp() {
     _log("afterLoadApp")
+    if(config.blockChain.enableBiAnWs){
+      new BaWebSocket({
+        onReady:(ws)=>{
+          ws.subscribe(config.blockChain.biAnWsInitStream)
+        }
+      })
+    }
     BDApp.hideSpinner()
   }
 

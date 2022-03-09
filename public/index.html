@@ -63,15 +63,9 @@
       }
     </style>
   <script>
-    // window.onerror = function (msg, url, lineNo, columnNo, error) {
-    //     console.error("💥 window.onerror",msg, url, lineNo, columnNo, error)
-    //     return false;
-    // };
-    window.process = {
-      env: {
-        NODE_ENV: 'development'
-      }
-    }
+    window.__BASE_API = "{{BASE_API}}|http://127.0.0.1:8000/api"
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); })
   </script>
 </head>
 <body>

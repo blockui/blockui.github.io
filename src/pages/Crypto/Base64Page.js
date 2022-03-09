@@ -13,6 +13,8 @@ import WeButton from "shared/weui/WeButton";
 import {base64Decode, base64Encode} from "shared/functions/base64";
 import UploadFileView from "components/UploadFileView";
 import {getConstant} from "shared/functions/common";
+import QrCodeScannerView from "../../components/QrCodeScannerView";
+import {setStoreState} from "../../components/core/App";
 
 class Base64Page extends React.PureComponent {
   constructor(props) {
@@ -34,6 +36,18 @@ class Base64Page extends React.PureComponent {
       <BasePage
         right={[
           {
+            icon: "RiQrScanLine",
+            onClick: ()=>{
+              setStoreState("global", {
+                qrCodeScanner: (message) => {
+                  this.setState({
+                    message
+                  })
+                }
+              })
+            }
+          },
+          {
             icon: "upload",
             onClick: () => this.uploader.current.upload()
           }
@@ -54,6 +68,7 @@ class Base64Page extends React.PureComponent {
           </WeFlex>
         )
       }}>
+
         <WeFormTextArea
           style={{height: `calc(100vh - ${getAppBarHeight()}px - ${getPageFooterHeight()}px - 32px)`}}
           placeholder={"请输入"} value={message}

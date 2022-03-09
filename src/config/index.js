@@ -5,6 +5,11 @@ const config = {
     authPwdExpireSec:1800,
     IM_WS_CONNECT_KEY_1:"fDvRKDd4U33sigu5mzbwQRmrzeqhf1UW71WUbafZ6eESgujyHuu0vMtKl0YzUcQJsprEaTw+BZJfPv3yR1XDmQ==",
   },
+  blockChain:{
+    biAnWsApi:"wss://stream.binance.com:9443",
+    enableBiAnWs:true,
+    biAnWsInitStream:[`btcusdt@kline_1m`,`ethusdt@kline_1m`,`bnbusdt@kline_1m`]
+  },
   ui: {
     HomeTopBarHeight: 80,
     CatSearchPickSelector: ".weui-half-screen-dialog__hd__main",

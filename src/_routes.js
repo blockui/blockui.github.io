@@ -63,6 +63,12 @@ import TestDemoWeuiFormSwitch from 'pages/Test/Demo/Weui/Form/SwitchPage';
 import TestDemoWeuiFormTextarea from 'pages/Test/Demo/Weui/Form/TextareaPage';
 import TestIndex from 'pages/Test/IndexPage';
 import TestTestsAwait from 'pages/Test/Tests/AwaitPage';
+import TestTradeViewBar from 'pages/Test/TradeView/BarPage';
+import TestTradeViewCandlestick from 'pages/Test/TradeView/CandlestickPage';
+import TestTradeViewDemo from 'pages/Test/TradeView/DemoPage';
+import TestTradeViewRealtimeBiAn from 'pages/Test/TradeView/RealtimeBiAnPage';
+import TestTradeViewRealtime from 'pages/Test/TradeView/RealtimePage';
+import TestTradeViewTwoPrice from 'pages/Test/TradeView/TwoPricePage';
 import {Home404} from 'components/core/PageManager';
 
 
@@ -127,6 +133,12 @@ const Routes =  [
   {name: 'Test/Demo/Weui/Form/Textarea', component: TestDemoWeuiFormTextarea},
   {name: 'Test/Index', component: TestIndex},
   {name: 'Test/Tests/Await', component: TestTestsAwait},
+  {name: 'Test/TradeView/Bar', component: TestTradeViewBar},
+  {name: 'Test/TradeView/Candlestick', component: TestTradeViewCandlestick},
+  {name: 'Test/TradeView/Demo', component: TestTradeViewDemo},
+  {name: 'Test/TradeView/RealtimeBiAn', component: TestTradeViewRealtimeBiAn},
+  {name: 'Test/TradeView/Realtime', component: TestTradeViewRealtime},
+  {name: 'Test/TradeView/TwoPrice', component: TestTradeViewTwoPrice},
   {name: 'Home/404', component: Home404}
 ];
 
