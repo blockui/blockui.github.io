@@ -59,6 +59,7 @@ class BaWebSocket {
     this.ws = null;
     currentInstance = null;
     console.log("ws onClose", e)
+    this.init()
   }
 
   onError(e) {

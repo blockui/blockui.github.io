@@ -1,6 +1,7 @@
 {
-  "short_name": "白鲸",
-  "name": "白鲸",
+  "id": "App",
+  "short_name": "App",
+  "name": "App",
   "icons": [
     {
       "src": "static/favicon.svg",

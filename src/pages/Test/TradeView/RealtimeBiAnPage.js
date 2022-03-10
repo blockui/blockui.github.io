@@ -10,6 +10,7 @@ class RealtimeBiAnPage extends React.PureComponent {
         <ChartCandleView symbol={"BTCUSDT"}/>
         <ChartCandleView symbol={"ETHUSDT"}/>
         <ChartCandleView symbol={"BNBUSDT"}/>
+        <ChartCandleView symbol={"SFPUSDT"}/>
       </BasePage>
     );
   }
