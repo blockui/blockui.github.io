@@ -3,21 +3,19 @@ import {render} from 'react-dom'
 import App from "components/core/App";
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import "./bootstrap"
-import constant from 'config/constant.json'
-import { extendTheme, ChakraProvider } from '@chakra-ui/react'
+import {ChakraProvider, extendTheme} from '@chakra-ui/react'
+
 const colors = {
   brand: {
     900: '#1a365d',
     800: '#153e75',
     700: '#2a69ac',
-    
+
   },
 }
-const theme = extendTheme({ colors })
+const theme = extendTheme({colors})
 
 const renderApp = () => {
-  // console.log(constant)
-  console.log(process.env)
   render(
     <ChakraProvider theme={theme}>
       <App/>
