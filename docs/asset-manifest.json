@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "static/css/main.css",
-    "main.js": "static/js/bundle-4d2aab5f0c336d33abba.js",
+    "main.js": "static/js/bundle-45046886b76ebfa7ef96.js",
     "index.html": "index.html",
     "service-worker.js": "service-worker.js",
-    "static/js/bundle-4d2aab5f0c336d33abba.js.LICENSE.txt": "static/js/bundle-4d2aab5f0c336d33abba.js.LICENSE.txt"
+    "static/js/bundle-45046886b76ebfa7ef96.js.LICENSE.txt": "static/js/bundle-45046886b76ebfa7ef96.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/css/main.css",
-    "static/js/bundle-4d2aab5f0c336d33abba.js"
+    "static/js/bundle-45046886b76ebfa7ef96.js"
   ]
 }
