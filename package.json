@@ -154,7 +154,7 @@
     "routes:wallet": "INDEX=Wallet/Index npm run routes",
     "routes": "APPS=Home,Crypto,Wallet,Test node scripts/routes.js",
     "build": "BUILD_PATH=docs node scripts/build.js",
-    "server": "serve -s build -l 3008 --cors | open http://localhost:3008"
+    "server": "serve -s docs -l 3008 --cors | open http://localhost:3008"
   },
   "resolutions": {
     "//": "See https://github.com/facebook/create-react-app/issues/11773",
